@@ -14,24 +14,24 @@ function recipesList() {
     recipes.forEach((el, ind) => {
         let divRecipe = document.createElement('div');
         divRecipe.className = "recipe-item";
-        divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><a href="" class="delete"><img src="img/delete.png" alt=""></a></div></div>';
+        divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe-eng.html?id='+ind+'" class="moreInfo">More</a><a href="" class="delete"><img src="../img/delete.png" alt=""></a></div></div>';
 
         recipesList.append(divRecipe);
     })
-    7}
+}
 
 function recipeInfo(id) {
     let divRecipe = document.createElement('div');
-    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients">    <h3>Ингредиенты</h3>'+recipes[id].ingredients+'</div></div><h3>Приготовление</h3><div class="cooking">'+recipes[id].cooking+'</div>';
+    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients">    <h3>Ingrdients</h3>'+recipes[id].ingredients+'</div></div><h3>Recipe</h3><div class="cooking">'+recipes[id].cooking+'</div>';
         let recipeItem = document.querySelector('#recipeContent');
         recipeItem.append(divRecipe);
 		
 		let enflag = document.querySelector('#enflag');
-		enflag.setAttribute("href", "english/recipe-eng.html?id="+id);
+		enflag.setAttribute("href", "recipe-eng.html?id="+id);
 		
 		let ruflag = document.querySelector('#ruflag');
-		ruflag.setAttribute("href", "recipe.html?id="+id);
-
+		ruflag.setAttribute("href", "../recipe.html?id="+id);
+		
 }
 
 
@@ -56,3 +56,4 @@ function search() {
     }
 }
 document.addEventListener('keyup', search);
+
