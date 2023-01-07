@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>BookOfRecipes</title>
+</head>
+<body >
+    <div class="panel">
+        <div class="container">
+            <div class="flex">
+                <div class="buttons">
+                    <a href="index-eng.html">Recipes</a>
+                    <a href="aboutUs-eng.html">About us</a>
+                    <a href="support-eng.html">Support</a>
+                </div>
+                <div class="languages">
+                    <a href="../index.html"><img src="../img/russia.png" alt=""></a>
+                    <a href="index-eng.html"><img src="../img/UK.png" alt=""></a>    
+                    <img src="../img/brightness.png" class="themeChange" onclick="changeTheme()">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <div class="white-bg">
+                <h1>All recipes</h1>
+               
+            
+
+                 <div class="flex recipes" id="recipesList">
+                    
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="data-eng.js"></script>
+<script src="script.js"></script>
+<script>recipesList();</script>
+    
+</body>
+</html>
