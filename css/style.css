@@ -349,3 +349,14 @@ h3 {
 .recipeImage:hover img {
 	transform: scale(1.1);
 }
+.input{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+}
+#inputSearch{
+	width: 200px;
+	height: 40px;
+	font-size: 30px;
+}

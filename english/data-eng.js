@@ -65,15 +65,15 @@ let recipes = [
 
     {
         title: 'French toast',
-        image: '../mg/r/frenchtoast.jpg',
+        image: '../img/r/frenchtoast.jpg',
         ingredients: '<li>Bread for toast 6 slices</li><li>Milk 70ml</i><li>Chicken egg 3 pcs</li><li>Pinch of salt</li><li>Sugar 3 tbsp</li><li>Butter 60g</li><li>Honey to taste</li><li>Fresh berries 110g</li>',
         cooking: '<p>1. Cut the bread into triangles</p><p>2. Beat eggs with milk, sugar and salt</p><p>3. Heat the pan and melt the butter</p><p>4. Dip the bread on both sides in the mixture and send to the pan</p><p>5. Fry for one and a half minutes on each side (consider the features of your stove)</p><p>6. Preheat the oven to 180 degrees and send the toasts to bake in the oven until crust</p><p>7. Garnish with berries, drizzle with honey or syrup</p>',
         category: ''
     },
 
     {
-        title: '../French fries',
-        image: 'img/r/fries.jpg',
+        title: 'French fries',
+        image: '../img/r/fries.jpg',
         ingredients: '<li>1 kg potatoes for frying</li><li>vegetable oil for deep frying</li><li>medium sea salt</li><li>good ketchup to serve</li>',
         cooking: '<p>1. Peel the potatoes. Cut off the rounded parts on all sides so that you get a rectangular bar. Cut it lengthwise into 1 cm thick plates, each plate into 1 cm thick sticks</p><p>2. Rinse the sliced ​​potatoes in cold water and put in a pot of salted boiling water (there should be plenty of water so that the potatoes lie freely in it). Bring water to a boil over medium heat. Reduce heat to low and simmer potatoes for 2 minutes. Throw it in a colander and let it dry and cool, 20-30 minutes. All this is necessary in order to get rid of excess starch</p><p>3.Spread the cooled potatoes on a tray and put in the freezer for 20–30 minutes. This is necessary so that a crispy crust immediately forms on the potatoes during frying.</p><p>4. While the potatoes are in the freezer, prepare a deep, wide pot (or skillet, or wok) with a thick bottom for deep-frying. Pour oil into it - you should get a layer with a depth of at least 8-10 cm. The more oil, the larger portions of potatoes you can lay, leave the pan on medium-high heat and heat the oil to 190 ° C. If you dont have a thermometer, keep a few cubes of white bread with a side of 1 cm ready. If a cube thrown into hot oil fries until golden brown in 30 seconds, then the butter is ready</p><p>5. In portions, carefully, with a slotted spoon, spread the frozen potatoes in oil and fry until a beautiful golden crust on all sides, about 1 min. To keep cooked potatoes warm, lay them out for 1 minute first. on paper towels to drain excess fat, and then on a dish or baking sheet, standing in an oven preheated to 80-100 ° C</p>',
         category: ''
@@ -96,7 +96,7 @@ let recipes = [
     },
 
     {
-        title: 'lasagna',
+        title: 'Lasagna',
         image: '../img/r/lasagna.jpg',
         ingredients: '<li>2 tablespoons olive oil</li><li>1 onion</li><li>500 g ground beef</li><li>salt to taste</li><li>ground black pepper - to taste</li><li>500 g of passata or fresh tomatoes without skins, cut into small cubes</li><li>1 teaspoon of dried basil</li><li>40 g of butter + a little for greasing</li><li>40 g flour</li><li>400 ml milk</li><li>salt to taste</li><li>ground black pepper to taste</li><li>ground nutmeg, to taste</li><li>250g lasagne sheets</li><li>50g Parmesan</li>',
         cooking: '<p>1. Heat the oil in a frying pan and sauté the finely chopped onion until golden brown. Put the minced meat and fry, stirring, until the meat is ready. Season with salt and pepper</p><p>2. Add the passata or tomatoes, stir and simmer for about 10 minutes. Then combine the mass with basil</p><p>3. Melt the butter in a saucepan over moderate heat. While stirring with a whisk, add flour. Whisking continuously, gradually pour in the milk. Boil the bechamel sauce, stirring constantly, until it thickens. Season with salt, pepper and nutmeg</p><p>4. Grease a baking dish with oil. Place a few sheets of lasagna on the bottom and cover them with some of the sauce. Spread some of the meat filling on top. Repeat layers. Top with béchamel sauce sprinkled with grated parmesan. Bake for 30 minutes at 190 °C</p>',
@@ -136,7 +136,7 @@ let recipes = [
     },
 
     {
-        title: 'sushi',
+        title: 'Sushi',
         image: '../img/r/sushi.jpg',
         ingredients: '<li>900g salmon fillet for sushi</li><li>2 cups sushi rice</li><li>pickled ginger</li><li>wasabi</li><li>soy sauce</li><li>8 art. l. rice vinegar</li><li>4 tbsp. l. sugar</li><li>1 tbsp. l. salt</li>',
         cooking: '<p>1. Rinse the rice in 5-6 waters until the water is clear. Then pour cold water at a ratio of 1:1 plus another 10%, put on a high heat, bring to a boil, reduce the heat to a minimum, close the lid and cook for 13-14 minutes without opening. Remove from heat, cover the pan with a blanket or place it under a pillow for 30–40 minutes. For dressing, heat all the ingredients together not to a boil, but just to dissolve the sugar and salt</p><p>2. Transfer the rice to a large unvarnished wooden bowl (do not use the crust at the bottom of the sushi pan). Put warm rice in the center of the bowl, pour out all the dressing, scatter the rice with a spatula, then collect it together with the dressing again in the center - and so 4 times. Leave for 10-15 minutes. If you have non-woodenware, reduce the amount of dressing by 1/3</p><p>3. Prepare the fish. For sushi, cut the fillet along the grain and 0.5 cm thick. The main principle is to cut as many beautiful pieces of fish as possible so that it does not crumble</p><p>4. To make "koloboks" for sushi, wet your hands with water. Take about 1 tbsp. l. rice and form an oblong bun by squeezing the rice with four fingers and touching the edges with your thumb</p><p>5. Lay the sushi fish across your fingers on the lower knuckles. Place the prepared kolobok on the fish and give it the final shape depending on the size of the piece of fish, pressing down the rice with your index finger. Then turn the sushi over and press the fish on the sides with your fingers - it should fit snugly against the rice</p>',
@@ -150,7 +150,7 @@ let recipes = [
         category: ''
     },
     {
-        title: 'Tom Yam',
+        title: 'Tom-Yum',
         image: '../img/r/tomyum.jpg',
         ingredients: '<li>Chicken broth 2l</li><li>Tom yum pepper paste 100g</li><li>Lemon 2pcs</li><li>Fish sauce 20ml</li><li>Sugar 50g</ li><li>Lemon grass 2 tbsp. l.</li><li>Ginger 30g</li><li>Lime leaves 4pcs</li><li>Peeled shrimp 500g</li><li>Champignons 200g</li><li>Coconut milk 200ml </li><li>Cilantro 50g</li><li>Chili pepper 1pc</li>',
         cooking: '<p>1.Add finely chopped ginger, lime leaves, lemongrass (two tablespoons dry or two stalks fresh) to the chicken broth and cook for five minutes</p><p>2. Add pepper paste there, mix the broth and cook for another two minutes</p><p>3. Then add fish sauce, sugar, after another two minutes, shrimp, chopped mushrooms, chili peppers, chopped into rings, and coconut milk</p><p>4. Bring to a boil, pour in the juice of two lemons, add coarsely chopped cilantro, wait until the soup boils again, and remove from heat</p>',
