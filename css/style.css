@@ -2,6 +2,12 @@
     font-family: Oswl;
     src: url(../fonts/Oswald-VariableFont_wght.ttf);
 }
+html {
+	scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+	width: 0;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -220,10 +226,22 @@ h3 {
 	justify-content: start;
 	list-style: none;
 }
-
+.input{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+}
+#inputSearch{
+	width: 200px;
+	height: 40px;
+	font-size: 30px;
+}
 @media screen and (max-width: 1600px) {
-	.container { width: 80%;
-				padding: 0 15px;}
+	.container {
+		width: 80%;
+		padding: 0 15px;
+	}
 }
 .recipeImage:hover img {
 	transform: scale(1.3);
