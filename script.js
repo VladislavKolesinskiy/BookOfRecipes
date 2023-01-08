@@ -1,4 +1,6 @@
 window.onload = changeTheme2();
+let data = JSON.parse(localStorage.getItem('data11'));
+console.log(data);
 function changeTheme() {
     if(localStorage.getItem('style') !== null) {
         document.body.classList.remove('dark');
@@ -26,7 +28,7 @@ function recipesList() {
 7}
 function recipeInfo(id) {
     let divRecipe = document.createElement('div');
-    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients" contenteditable="true">    <h3 contenteditable="false">Ингредиенты</h3>'+recipes[id].ingredients+'</div></div><h3>Приготовление</h3><div class="cooking" contenteditable="true">'+recipes[id].cooking+'</div>';
+    divRecipe.innerHTML = '<h1>'+data[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+data[id].image+'" ></div><div class="ingredients" contenteditable="true">    <h3 contenteditable="false">Ингредиенты</h3>'+data[id].ingredients+'</div></div><h3>Приготовление</h3><div class="cooking" contenteditable="true">'+data[id].cooking+'</div>';
     let recipeItem = document.querySelector('#recipeContent');
     recipeItem.append(divRecipe);
 	let enflag = document.querySelector('#enflag');
@@ -39,20 +41,20 @@ function getParam(key) {
     p = p.match(new RegExp(key + '=([^&=]+)'));
     return p ? p[1] : false;
 }
-function search() {
-    let input = document.getElementById("inputSearch");
-    let filter = input.value.toUpperCase();
-    let ul = document.getElementById("recipesList");
-    let li = ul.getElementsByClassName("recipe-item");
-    for (let i = 0; i < li.length; i++) {
-        let a = li[i].getElementsByTagName("h2")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+//function search() {
+//    let input = document.getElementById("inputSearch");
+//    let filter = input.value.toUpperCase();
+//    let ul = document.getElementById("recipesList");
+//    let li = ul.getElementsByClassName("recipe-item");
+//    for (let i = 0; i < li.length; i++) {
+//        let a = li[i].getElementsByTagName("h2")[0];
+//        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//            li[i].style.display = "";
+//        } else {
+//            li[i].style.display = "none";
+//        }
+//    }
+//}
 function setChangeListener (listener) {
     window.addEventListener("keyup", listener);
     window.addEventListener("blur", listener);
@@ -64,12 +66,15 @@ function setChangeListener (listener) {
     window.addEventListener("click", listener);
 }
 function listeneringr (){
-    let data = localStorage.getItem('data11');
-    console.log(data)
     let name = document.querySelector('h1').innerText;
-    data.map((el,i,arr) => {
-        if (el.title == name){return i}
+    let r = -1;
+    data.forEach((el,i,arr) => {
+        if (el.title == name){r = i}
     })
+    setTimeout(()=>{
+        data[r].ingredients = '<ul>'+document.querySelector('.ingredients ul').innerHTML+'</ul>';
+        localStorage.setItem('data11', JSON.stringify(data));
+    },1000)   
 }
-document.addEventListener('keyup', search);
+//document.addEventListener('keyup', search);
 window.onload = setChangeListener(listeneringr);
