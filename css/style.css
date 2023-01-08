@@ -359,4 +359,41 @@ h3 {
 	width: 200px;
 	height: 40px;
 	font-size: 30px;
+
+}
+.addRecipe:hover {
+	box-shadow: 0px 0px 10px 3px blue;
+}
+input{
+	width: 50%;
+}
+button{
+	width: 50px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+textarea{
+	width: 300px;
+	height: 200px;
+}
+.addRecipe{
+	width: 50%;
+	padding: 10px 0;
+	margin: auto;
+	border: solid blue 3px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: blue;
+	font-size: 30px;
+	background: white;
+	cursor: pointer;
+}
+.name {
+	color: black;
+	text-align: left;
+	margin: 0;
+	font-size: 30px;
 }
