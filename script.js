@@ -41,20 +41,20 @@ function getParam(key) {
     p = p.match(new RegExp(key + '=([^&=]+)'));
     return p ? p[1] : false;
 }
-//function search() {
-//    let input = document.getElementById("inputSearch");
-//    let filter = input.value.toUpperCase();
-//    let ul = document.getElementById("recipesList");
-//    let li = ul.getElementsByClassName("recipe-item");
-//    for (let i = 0; i < li.length; i++) {
-//        let a = li[i].getElementsByTagName("h2")[0];
-//        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//            li[i].style.display = "";
-//        } else {
-//            li[i].style.display = "none";
-//        }
-//    }
-//}
+function search() {
+    let input = document.getElementById("inputSearch");
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById("recipesList");
+    let li = ul.getElementsByClassName("recipe-item");
+    for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName("h2")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
 function setChangeListener (listener) {
     window.addEventListener("keyup", listener);
     window.addEventListener("blur", listener);
@@ -76,5 +76,5 @@ function listeneringr (){
         localStorage.setItem('data11', JSON.stringify(data));
     },1000)   
 }
-//document.addEventListener('keyup', search);
+document.addEventListener('keyup', search);
 window.onload = setChangeListener(listeneringr);
