@@ -9,6 +9,9 @@
 	font-family: Oswl;
 	transition: 0.3s;
 }
+::-webkit-scrollbar {
+	width: 0;
+}
 body {
 	background: url(../img/backbg.jpg);
 }

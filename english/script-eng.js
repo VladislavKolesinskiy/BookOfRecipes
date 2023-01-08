@@ -1,12 +1,19 @@
+window.onload = changeTheme2();
 function changeTheme() {
-    if(document.body.classList.contains('dark')) {
+    if(localStorage.getItem('style') !== null) {
         document.body.classList.remove('dark');
+        localStorage.removeItem('style');
     }
     else {
         document.body.classList.add('dark');
+        localStorage.setItem('style','dark');
     }
 }
-
+function changeTheme2() {
+    if(localStorage.getItem('style') !== null) {
+        document.body.classList.add('dark');
+    }
+}
 function recipesList() {
     let recipesList = document.querySelector('#recipesList');
     recipesList.innerHTML = '';
@@ -22,7 +29,7 @@ function recipesList() {
 
 function recipeInfo(id) {
     let divRecipe = document.createElement('div');
-    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients">    <h3>Ingrdients</h3>'+recipes[id].ingredients+'</div></div><h3>Recipe</h3><div class="cooking">'+recipes[id].cooking+'</div>';
+    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients" contenteditable="true">    <h3 contenteditable="false">Ingrdients</h3>'+recipes[id].ingredients+'</div></div><h3>Recipe</h3><div class="cooking" contenteditable="true">'+recipes[id].cooking+'</div>';
         let recipeItem = document.querySelector('#recipeContent');
         recipeItem.append(divRecipe);
 		

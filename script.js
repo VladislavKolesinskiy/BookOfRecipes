@@ -1,46 +1,44 @@
+window.onload = changeTheme2();
 function changeTheme() {
-    if(document.body.classList.contains('dark')) {
+    if(localStorage.getItem('style') !== null) {
         document.body.classList.remove('dark');
+        localStorage.removeItem('style');
     }
     else {
         document.body.classList.add('dark');
+        localStorage.setItem('style','dark');
     }
 }
-
+function changeTheme2() {
+    if(localStorage.getItem('style') !== null) {
+        document.body.classList.add('dark');
+    }
+}
 function recipesList() {
     let recipesList = document.querySelector('#recipesList');
     recipesList.innerHTML = '';
-
     recipes.forEach((el, ind) => {
         let divRecipe = document.createElement('div');
         divRecipe.className = "recipe-item";
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><a href="" class="delete"><img src="img/delete.png" alt=""></a></div></div>';
-
         recipesList.append(divRecipe);
     })
-    7}
-
+7}
 function recipeInfo(id) {
     let divRecipe = document.createElement('div');
-    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients">    <h3>Ингредиенты</h3>'+recipes[id].ingredients+'</div></div><h3>Приготовление</h3><div class="cooking">'+recipes[id].cooking+'</div>';
-        let recipeItem = document.querySelector('#recipeContent');
-        recipeItem.append(divRecipe);
-		
-		let enflag = document.querySelector('#enflag');
-		enflag.setAttribute("href", "english/recipe-eng.html?id="+id);
-		
-		let ruflag = document.querySelector('#ruflag');
-		ruflag.setAttribute("href", "recipe.html?id="+id);
-
+    divRecipe.innerHTML = '<h1>'+recipes[id].title+'</h1><div class="flex recipe"><div class="recipeImg"><img src="'+recipes[id].image+'" ></div><div class="ingredients" contenteditable="true">    <h3 contenteditable="false">Ингредиенты</h3>'+recipes[id].ingredients+'</div></div><h3>Приготовление</h3><div class="cooking" contenteditable="true">'+recipes[id].cooking+'</div>';
+    let recipeItem = document.querySelector('#recipeContent');
+    recipeItem.append(divRecipe);
+	let enflag = document.querySelector('#enflag');
+	enflag.setAttribute("href", "english/recipe-eng.html?id="+id);
+	let ruflag = document.querySelector('#ruflag');
+	ruflag.setAttribute("href", "recipe.html?id="+id);
 }
-
-
 function getParam(key) {
     var p = window.location.search;
     p = p.match(new RegExp(key + '=([^&=]+)'));
     return p ? p[1] : false;
 }
-
 function search() {
     let input = document.getElementById("inputSearch");
     let filter = input.value.toUpperCase();
@@ -55,4 +53,23 @@ function search() {
         }
     }
 }
+function setChangeListener (listener) {
+    window.addEventListener("keyup", listener);
+    window.addEventListener("blur", listener);
+    window.addEventListener("paste", listener);
+    window.addEventListener("copy", listener);
+    window.addEventListener("cut", listener);
+    window.addEventListener("delete", listener);
+    window.addEventListener("mouseup", listener);
+    window.addEventListener("click", listener);
+}
+function listeneringr (){
+    let data = localStorage.getItem('data11');
+    console.log(data)
+    let name = document.querySelector('h1').innerText;
+    data.map((el,i,arr) => {
+        if (el.title == name){return i}
+    })
+}
 document.addEventListener('keyup', search);
+window.onload = setChangeListener(listeneringr);
