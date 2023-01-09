@@ -25,11 +25,7 @@ function recipesList() {
 
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><button href="" class="delete" onclick="delRecipe(this)"><img src="img/delete.png" alt=""></button></div></div>';
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><a href="" class="delete"><img src="img/delete.png" alt=""></a></div></div>';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 7300e17d8f57acbcab713839faa2497fdbf2e9f2
         recipesList.append(divRecipe);
     })
 7}
@@ -84,12 +80,9 @@ function listeneringr (){
     },1000)   
 }
 document.addEventListener('keyup', search);
-<<<<<<< HEAD
 
 
 function delRecipe(el){
     el.parentNode.parentNode.parentNode.remove()
 }
-=======
 window.onload = setChangeListener(listeneringr);
->>>>>>> 7300e17d8f57acbcab713839faa2497fdbf2e9f2
