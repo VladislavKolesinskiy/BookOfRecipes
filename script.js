@@ -22,7 +22,6 @@ function recipesList() {
     recipes.forEach((el, ind) => {
         let divRecipe = document.createElement('div');
         divRecipe.className = "recipe-item";
-
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><button href="" class="delete" onclick="delRecipe(this)"><img src="img/delete.png" alt=""></button></div></div>';
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><a href="" class="delete"><img src="img/delete.png" alt=""></a></div></div>';
         recipesList.append(divRecipe);
@@ -75,6 +74,7 @@ function listeneringr (){
     })
     setTimeout(()=>{
         data[r].ingredients = '<ul>'+document.querySelector('.ingredients ul').innerHTML+'</ul>';
+        data[r].cooking = document.querySelector('.cooking').innerHTML;
         localStorage.setItem('data11', JSON.stringify(data));
     },1000)   
 }
@@ -86,3 +86,7 @@ function delRecipe(el){
 }
 window.onload = setChangeListener(listeneringr);
 
+function delRecipe(el){
+    el.parentNode.parentNode.parentNode.remove()
+}
+window.onload = setChangeListener(listeneringr);
