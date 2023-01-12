@@ -153,6 +153,7 @@ h2 {
 	padding: 10px 0;
 	display: inline-block;
 	background: white;
+	cursor: pointer;
 
 }
 .delete img {
@@ -374,6 +375,7 @@ button{
 	width: 50px;
 	margin-right: 20px;
 	margin-top: 10px;
+	cursor: pointer;
 }
 textarea{
 	width: 300px;
@@ -399,4 +401,14 @@ textarea{
 	text-align: left;
 	margin: 0;
 	font-size: 30px;
+}
+.add{
+	text-decoration: none;
+	color: black;
+}
+.delete:hover{
+	transform: rotate(360deg);
+}
+.themeChange:hover{
+	transform: rotate(360deg);
 }
