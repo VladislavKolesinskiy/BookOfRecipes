@@ -23,10 +23,7 @@ function recipesList() {
         let divRecipe = document.createElement('div');
         divRecipe.className = "recipe-item";
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><button href="" class="delete" onclick="delRecipe(this)"><img src="img/delete.png" alt=""></button></div></div>';
-
         divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><button href="" class="delete" onclick="delRecipe(this)"><img src="img/delete.png" alt=""></button></div></div>';
-        divRecipe.innerHTML = '<div class="info"><div class="recipeImage"><img src="'+el.image+'" alt=""></div><h2>'+el.title+'</h2><div class="info-buttons"><a href="recipe.html?id='+ind+'" class="moreInfo">Подробнее</a><a href="" class="delete"><img src="img/delete.png" alt=""></a></div></div>';
-
         recipesList.append(divRecipe);
     })
 7}
@@ -82,12 +79,10 @@ function listeneringr (){
     },1000)   
 }
 document.addEventListener('keyup', search);
-
 function delRecipe(el){  
     el.parentNode.parentNode.parentNode.remove();
 }
 window.onload = setChangeListener(listeneringr);
-
 
 var snowCount = 100;
 var snowColor = new Array("#b9dff4", "#b9dff5", "#b9dff6", "#b9dff7", "#b9dff8");
@@ -114,7 +109,6 @@ var browserok = ie5 || ns6 || opera;
 function RandomMaker(range){
   return Math.floor(range * Math.random());
 }
-
 
 function InitSnow(){
   if (ie5 || opera){
@@ -189,10 +183,3 @@ for (i = 0; i <= snowCount; i++){
 if (browserok){
    window.onload = InitSnow;
 }
-
-window.onload = setChangeListener(listeneringr);
-
-function delRecipe(el){
-    el.parentNode.parentNode.parentNode.remove()
-}
-window.onload = setChangeListener(listeneringr);
