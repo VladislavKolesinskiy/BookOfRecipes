@@ -84,7 +84,6 @@ function delRecipe(el){
 }
 window.onload = setChangeListener(listeneringr);
 
-// Настройки
 var snowCount = 100;
 var snowColor = new Array("#b9dff4", "#b9dff5", "#b9dff6", "#b9dff7", "#b9dff8");
 var snowType = new Array("Times");
@@ -92,9 +91,7 @@ var snowletter = "*"
 var sinkSpeed = 0.5;
 var snowSizeMin = 10;
 var snowSizeMax = 40;
-var snowLocation = 1; // 1 - по всему экрану, 2 - слева, 3 - по центру, 4 - справа
-
-// Элементы для работы скрипта (здесь не стоит ничего менять)
+var snowLocation = 1; 
 var snow = new Array();
 var marginbottom;
 var marginright;
